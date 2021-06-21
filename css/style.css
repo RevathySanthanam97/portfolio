@@ -164,7 +164,7 @@ nav{
 }
 .menuList .navigation {
   position: relative;
-  padding: 15px 0px 0px 0px;
+  padding: 15px 50px 0px 50px;
   width: 100%;
 }
 .navLinks {
@@ -1050,6 +1050,9 @@ form button {
   }
   .menuList{
     padding: 15px 20px;
+  }
+  .menuList .navigation {
+    padding: 0px;
   }
   .socialMedia{
     padding: 20px 0px;

@@ -1,8 +1,8 @@
-window.onload = function(){ 
-    setTimeout(() => {
-        document.getElementById("preloader").classList.add('active');
-    }, 500);
-}
+// window.onload = function(){ 
+//     setTimeout(() => {
+//         document.getElementById("preloader").classList.add('active');
+//     }, 500);
+// }
 document.getElementById('menu').addEventListener('click', function(){
     document.getElementById('menuList').style.transform = "translateY(0%)";
     document.getElementById('menuList').style.transition = "0.4s";
@@ -23,13 +23,13 @@ document.querySelectorAll(".selectColor").forEach(element => {
     })
 })
 
-// Create the observer
-const observer = new IntersectionObserver(entries => {
-    console.log('arrived')
-  });
+// // Create the observer
+// const observer = new IntersectionObserver(entries => {
+//     console.log('arrived')
+//   });
   
-  // Tell the observer which elements to track
-observer.observe(document.querySelector('.skills'));
+//   // Tell the observer which elements to track
+// observer.observe(document.querySelector('.skills'));
 
 document.querySelectorAll(".buttons").forEach(element => {
     element.addEventListener("click", event => {
