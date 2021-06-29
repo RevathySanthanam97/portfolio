@@ -1,8 +1,9 @@
-// window.onload = function(){ 
-//     setTimeout(() => {
-//         document.getElementById("preloader").classList.add('active');
-//     }, 500);
-// }
+window.onload = function(){ 
+    setTimeout(() => {
+        document.getElementById("preloader").classList.add('active');
+        document.getElementById("home").style.display="block";
+    }, 1000);
+}
 document.getElementById('menu').addEventListener('click', function(){
     document.getElementById('menuList').style.transform = "translateY(0%)";
     document.getElementById('menuList').style.transition = "0.4s";

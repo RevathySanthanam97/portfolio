@@ -39,12 +39,14 @@ body {
   height: 100vh;
   position: fixed;
   z-index: 100;
-  font-family: poppins;
+  font-family: Arial, Helvetica, sans-serif;
   background-color: #202020;
   color: whitesmoke;
   font-size: 70px;
   width: 100%;
   transition: 1.5s;
+  top: 0px;
+  left: 0px;
 }
 #preloader.active {
   transform: translate(0px, -100%);
@@ -342,6 +344,7 @@ nav{
   position: relative;
   animation: scale 1.5s ease;
   padding: 0px 0px 0px 50px;
+  height: 100vh;
 }
 .banner {
     height: 100vh;
@@ -445,6 +448,9 @@ nav{
   width: 60%;
   display: flex;
   flex-direction: column;
+}
+#myForm input, #myForm textarea{
+  color: whitesmoke;
 }
 .formHeader {
   font-size: 24px;
@@ -566,6 +572,7 @@ form button {
   text-align: left;
   margin-left: 100px;
 }
+
 .icon {
   height: 40px;
   opacity: .8;
@@ -759,19 +766,24 @@ form button {
   font-weight: 200;
   font-size: 25px;
 }
+/* .service-two h2{
+  font-size: 22px;
+  padding-top: 13px;
+  margin: 5px 0px;
+} */
 .service-description p {
   padding: 10px;
   font-weight: 200;
   font-size: 16px;
   opacity: .8;
 }
-.experienceContent{
+.skillContent{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
 }
-.experiences{
+.skills{
   height: 420px;
   width: 40%;
   margin: 20px;
@@ -779,11 +791,12 @@ form button {
   position: relative;
   overflow: hidden;
 }
-.experiences a {
+.skills a {
   text-decoration: none;
   color: whitesmoke;
+  cursor: auto;
 }
-.experiences .img {
+.skills .img {
   height: 80%;
   width: 100%;
   overflow: hidden;
@@ -791,12 +804,12 @@ form button {
   position: relative;
   font-size: 0px;
 }
-.experiences .img img {
+.skills .img img {
   height: 100%;
   width: 100%;
   transition: all .65s ease;
 }
-.experienceDate {
+.skillDate {
   position: absolute;
   left: 0;
   bottom: 0;
@@ -811,7 +824,7 @@ form button {
   width: 140px;
   height: auto;
 }
-.experienceText {
+.skillText {
   height: 80%;
   width: 100%;
   text-align: center;
@@ -821,14 +834,14 @@ form button {
   background-color: #050505;
   transition: all .5s ease;
 }
-.experienceText h3 {
+.skillText h3 {
   font-size: 28px;
   font-weight: 500;
   height: 20%;
   padding: 20px;
   letter-spacing: 1px;
 }
-.experienceText p {
+.skillText p {
   font-size: 18px;
   opacity: .9;
   font-weight: 400;
@@ -836,70 +849,11 @@ form button {
   padding: 30px;
   letter-spacing: 1px;
 }
-.experiences:hover .img {
+.skills:hover .img {
   transform: translateY(-70%);
 }
-.experiences:hover .experienceText {
+.skills:hover .skillText {
   transform: translateY(-70%);
-}
-.skills {
-  width: 100%;
-  height: auto;
-}
-.skillsHeader {
-  height: auto;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 45px;
-  font-family: raleway;
-  padding: 10px;
-  padding-bottom: 30px;
-  padding-top: 30px;
-  font-weight: 900;
-}
-.skillsContent {
-  height: auto;
-  width: 100%;
-  margin-top: 20px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-around;
-}
-.skillName{
-  margin-bottom: 5px;
-}
-.skillsList {
-  height: auto;
-  width: 45%;
-  position: relative;
-  font-family: poppins;
-  color: whitesmoke;
-  display: inline-block;
-  margin-bottom: 35px;
-}
-.skillPercentage{
-  position: absolute;
-  top: 10%;
-  left: 1%;
-  height: 80%;
-  display: flex;
-  align-items: center;
-  font-family: poppins;
-  justify-content: center;
-  transition: all .4s ease;
-  width: 90%;
-  border-radius: 10px;
-  background: var(--color);
-}
-.progBar{
-  width: 100%;
-  height: 40px;
-  border-radius: 10px;
-  background: #272727;
-  position: relative;
-  overflow: hidden;
 }
 /* abouttSectionEnd */
 
@@ -1071,10 +1025,10 @@ form button {
     text-align: center;
   }
  
-  .navLinks .experienceButton::after{
+  .navLinks .skillButton::after{
     font-size: 2.5em;
   }
-  .experiences {
+  .skills {
     height: auto;
     width: 85%;
     margin: 10px;
@@ -1082,7 +1036,7 @@ form button {
     margin-bottom: 20px;
     pointer-events: none;
   }
-  .experiences .img {
+  .skills .img {
     height: 40%;
     width: 100%;
     overflow: hidden;
@@ -1166,7 +1120,7 @@ form button {
     padding: 15px 0px;
     font-size: 25px;
   }
-    .navLinks .experienceButton::after{
+    .navLinks .skillButton::after{
     font-size: 25px;
   }
   .socialMedia {
@@ -1182,16 +1136,16 @@ form button {
   .bannerContent .profession{
     font-size: 20px;
   }
-  .skillsList{
-    width: 90%;
-  }
   .aboutMain{
     padding: 0px;
   }
   .service {
     width: 100%;
   }
-  .experiences {
+  .service-description h2{
+    font-size: 21px;
+  }
+  .skills {
     width: 100%;
     margin-left: 0px;
     margin-right: 0px;
@@ -1206,9 +1160,15 @@ form button {
     width: 100%;
   }
   .bannerImg,.bannerImg img{
-    height: auto;
+    height: 100vh;
     width: 100%;
     float: unset;
     text-align: center;
+  }
+  .contactInfoContentLine .mailId p{
+    font-size: 10px;
+  }
+  #preloader{
+    font-size: 50px;
   }
 }
