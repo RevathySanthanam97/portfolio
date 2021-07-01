@@ -695,7 +695,7 @@ form button {
   border-radius: 40px;
 }
 .aboutImg img {
-  width: 100%;
+  width: auto;
   height: 380px;
   border-radius: 40px;
 }
