@@ -47,10 +47,11 @@ body {
   transition: 1.5s;
   top: 0px;
   left: 0px;
+  opacity: 1;
 }
 #preloader.active {
   transform: translate(0px, -100%);
-  opacity: 0;
+  /* opacity: 0; */
 }
 section {
   box-sizing: border-box;
@@ -958,13 +959,18 @@ form button {
   color: var(--color);
   transition: all .4s ease;
   outline: none;
-  margin: 20px;
   border: 2px solid var(--color);
   cursor: pointer;
   overflow: hidden;
   position: relative;
   transition: all .4s ease;
   display: inline-block;
+}
+
+.portfolio-text a{
+  display: inline-block;
+  height: 50px;
+  margin: 20px;
 }
 .projectButton::before{
   content: "";
