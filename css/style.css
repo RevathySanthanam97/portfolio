@@ -570,7 +570,7 @@ form button {
   flex-direction: row;
   align-items: center;
   text-align: left;
-  margin-left: 100px;
+  margin-left: 50px;
 }
 
 .icon {
@@ -766,11 +766,11 @@ form button {
   font-weight: 200;
   font-size: 25px;
 }
-/* .service-two h2{
+.service-two h2{
   font-size: 22px;
   padding-top: 13px;
   margin: 5px 0px;
-} */
+}
 .service-description p {
   padding: 10px;
   font-weight: 200;
@@ -948,7 +948,7 @@ form button {
 .button {
   text-align: center;
 }
-.portfolio-text button {
+.portfolio-text .projectButton{
   font-size: 16px;
   opacity: .8;
   font-family: poppins;
@@ -959,23 +959,34 @@ form button {
   transition: all .4s ease;
   outline: none;
   margin: 20px;
-  border: 1.5px solid var(--color);
+  border: 2px solid var(--color);
   cursor: pointer;
   overflow: hidden;
   position: relative;
   transition: all .4s ease;
+  display: inline-block;
 }
-.portfolio-text button::before {
+.projectButton::before{
   content: "";
   position: absolute;
-  width: 0%;
+  width: 115%;
   height: 200%;
   transform: rotate(-15deg) translateY(-20px);
-  top: 0;
-  left: 0;
+  top: 0%;
+  left: -118%;
   z-index: 3;
   background: var(--color);
   transition: all .7s ease;
+}
+.projectButton .index{
+  z-index: 6;
+  position: relative;
+}
+.projectButton:hover{
+  color: #000;
+}
+.projectButton:hover.projectButton::before{
+  left: 0%;
 }
 /* portfolioSectionEnd */
 
