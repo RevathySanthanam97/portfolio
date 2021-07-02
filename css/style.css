@@ -2,6 +2,7 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
+  -webkit-user-select: none;
 }
 :root {
   --color: #c70039;
@@ -366,9 +367,19 @@ nav{
 }
 .profession {
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   padding-top: 30px;
 }
+
+.profession-html{
+  font-size: 25px;
+  text-align: center;
+}
+.cv a{
+  display: inline-block;
+    width: auto;
+}
+
 
 .socialMedia {
   height: 100vh;
