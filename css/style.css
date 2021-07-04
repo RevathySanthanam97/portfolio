@@ -19,6 +19,9 @@
   background-color: var(--color);
   transition: 0.5s ease;
 }
+a {
+  font-size: 0px;
+}
 body {
   position: relative;
   overflow: hidden;
@@ -168,7 +171,7 @@ nav {
 }
 .menuList .navigation {
   position: relative;
-  padding: 15px 50px 0px 50px;
+  padding: 25px 50px 0px 50px;
   width: 100%;
 }
 .navLinks {
@@ -251,7 +254,7 @@ nav {
   }
 }
 .navigation {
-  padding: 15px 50px;
+  padding: 25px 50px 15px 50px;
   position: fixed;
   width: 100vw;
   box-sizing: border-box;
@@ -268,7 +271,7 @@ nav {
   flex: 1;
 }
 .logo img {
-  width: 100px;
+  width: 72px;
   transition: 0.5s;
 }
 .logo img:hover {
@@ -373,10 +376,6 @@ nav {
 .profession-html {
   font-size: 25px;
   text-align: center;
-}
-.cv a {
-  display: inline-block;
-  width: auto;
 }
 
 .socialMedia {
@@ -684,8 +683,13 @@ form button {
   font-weight: 400;
   cursor: pointer;
   position: relative;
-  transition: all 0.4s ease;
+  transition: all 0.2s ease;
 }
+.cv a {
+  display: block;
+  width: auto;
+}
+
 .aboutPara {
   justify-content: center;
   font-size: 20px;
