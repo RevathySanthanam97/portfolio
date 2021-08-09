@@ -1054,6 +1054,9 @@ form button {
   .navigation {
     padding: 15px 20px;
   }
+  .color-changer {
+    top: 25%;
+  }
   .menuList {
     padding: 15px 20px;
   }
