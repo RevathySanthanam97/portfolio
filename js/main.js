@@ -24,14 +24,6 @@ document.querySelectorAll(".selectColor").forEach((element) => {
   });
 });
 
-// // Create the observer
-// const observer = new IntersectionObserver(entries => {
-//     console.log('arrived')
-//   });
-
-//   // Tell the observer which elements to track
-// observer.observe(document.querySelector('.skills'));
-
 document.querySelectorAll(".buttons").forEach((element) => {
   element.addEventListener("click", (event) => {
     var selected = element.getAttribute("data-text");
