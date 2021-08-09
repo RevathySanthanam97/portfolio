@@ -1230,4 +1230,8 @@ form button {
   #preloader {
     font-size: 50px;
   }
+  .portfolio-image,
+  .portfolio-text {
+    width: 100%;
+  }
 }
