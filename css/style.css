@@ -5,7 +5,7 @@
   -webkit-user-select: none;
 }
 :root {
-  --color: #dd7631;
+  --color: #00909e;
   --mainColor: whitesmoke;
 }
 .colors {
@@ -695,10 +695,11 @@ form button {
   border-radius: 0px;
   transition: all 0.2s ease;
 }
-.cv button.buttons:hover {
-  color: var(--color);
-  border-bottom: 1px solid var(--color);
+.cv button.buttons svg {
+  position: relative;
+  top: 5px;
 }
+
 .cv a {
   display: block;
   width: auto;
