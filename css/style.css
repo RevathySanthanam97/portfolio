@@ -1066,9 +1066,10 @@ form button {
   .socialMedia {
     padding: 20px 0px;
     flex-direction: row;
-    align-items: flex-end;
     justify-content: center;
     width: 100vw;
+    bottom: 10px;
+    height: auto;
   }
   .socialMediaLinks {
     margin: 0px 30px;
