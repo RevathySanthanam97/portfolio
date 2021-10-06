@@ -1194,6 +1194,9 @@ form button {
   .bannerContent .profession {
     font-size: 20px;
   }
+  .bannerContent .profession-html{
+    font-size: 15px;
+  }
   .aboutMain {
     padding: 0px;
   }
