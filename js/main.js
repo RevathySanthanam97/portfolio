@@ -25,20 +25,21 @@ document.querySelectorAll(".selectColor").forEach((element) => {
 });
 
 document.querySelectorAll(".buttons").forEach((element) => {
-  element.addEventListener("click", (event) => {
+  element.addEventListener("click", () => {
     var selected = element.getAttribute("data-text");
     document.querySelectorAll(".buttonSection").forEach((element) => {
       document.getElementById("breaker").style.display = "none";
-      element.style.display = "none";
+      element.classList.remove('start-anim');
       if (element.getAttribute("data-text") == selected) {
         setTimeout(() => {
+          element.classList.add('start-anim');
           document.getElementById("menuList").style.transform =
             "translateY(-100%)";
           document.getElementById("menuList").style.transition = "0s";
           document.getElementById("breaker").style.display = "block";
         }, 100);
         setTimeout(() => {
-          element.style.display = "block";
+          element.scrollIntoView();
         }, 500);
       }
     });
