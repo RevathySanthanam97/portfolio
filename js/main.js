@@ -1,7 +1,7 @@
 window.onload = function () {
   setTimeout(() => {
     document.getElementById("preloader").classList.add("active");
-    // document.getElementById("home").style.display = "block";
+    document.getElementById("home").style.display = "block";
   }, 500);
 };
 document.getElementById("menu").addEventListener("click", function () {
