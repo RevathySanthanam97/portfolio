@@ -655,6 +655,7 @@ form button {
   height: auto;
   flex-direction: row;
   margin: 30px 0 50px;
+  gap: 30px;
 }
 .aboutPara h5 {
   font-size: 35px;
@@ -844,6 +845,7 @@ form button {
   height: 100%;
   width: 100%;
   transition: all 0.65s ease;
+  object-fit: cover;
 }
 .skillDate {
   position: absolute;
@@ -889,7 +891,7 @@ form button {
   letter-spacing: 1px;
 }
 .skills:hover .img {
-  transform: translateY(-70%);
+  transform: translateY(-66%);
 }
 .skills:hover .skillText {
   transform: translateY(-70%);
@@ -897,121 +899,87 @@ form button {
 /* abouttSectionEnd */
 
 /* portfolioSectionEnd */
-.portfoliosect {
-  height: auto;
-  width: 100vw;
-  padding: 0px;
+:root {
+  --portfolio-space: 70px;
 }
-.portfolioContainer .sectionTitle {
-  padding-top: 140px;
-  padding-bottom: 0;
+.portfoliosect .portfolio-content {
+  margin: 30px 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
 }
-.portfolio-header {
-  height: auto;
-  width: 100%;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  font-size: 45px;
-  font-family: raleway;
-  transition: all 0.4s ease;
-  padding: 10px;
-  padding-bottom: 30px;
-  padding-top: 60px;
-  font-weight: 900;
+.portfoliosect .portfolio {
+  position: relative;
+  padding-right: var(--portfolio-space);
+  margin-bottom: var(--portfolio-space);
 }
-.portfolio-content {
-  width: 100%;
+.portfoliosect .portfolio-tabs ul {
   display: flex;
-  height: auto;
-  flex-direction: column;
+  list-style-type: none;
   justify-content: center;
-  overflow: none;
-}
-.portfolio {
-  height: auto;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  padding: 0px;
-  padding-right: 0px;
-  padding-bottom: 40px;
-}
-.portfolio-image {
-  height: 400px;
-  width: 40%;
-}
-.portfolio-image iframe {
-  border: none;
-  filter: brightness(30%);
+  gap: 20px;
 }
 
-.portfolio-image img {
-  height: 400px;
+.portfoliosect .portfolio-tabs ul li {
+  font-size: 14px;
+  text-decoration: none;
+  color: #ffffff;
+  cursor: pointer;
+}
+.portfoliosect .portfolio-tabs ul li.active {
+  color: var(--color);
+  text-decoration: underline;
+}
+.portfoliosect .portfolio-image {
+  width: calc(100% - var(--portfolio-space));
+  height: 100%;
+  position: absolute;
+}
+.portfoliosect .portfolio-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left top;
+}
+.portfoliosect .portfolio-text {
   width: 100%;
   position: relative;
-  object-fit: cover;
-  object-position: left;
-  filter: brightness(30%);
-}
-.portfolio-image img::before {
-  content: "";
+  z-index: 5;
+  margin-left: var(--portfolio-space);
+  margin-top: var(--portfolio-space);
   height: 100%;
+  display: flex;
+}
+.portfoliosect .portfolio-text .portfolio-text-wrapper {
+  background-color: #080808;
+  margin: unset;
+  margin-top: auto;
+  padding: 16px;
   width: 100%;
-  background: var(--color);
-  opacity: 0.1;
-  top: 0;
-  left: 0;
-  transition: all 0.4s ease;
-  position: absolute;
-  z-index: 2;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
 }
-.portfolio-text {
-  width: 40%;
-  padding-left: 1%;
-  margin: 1%;
-  margin-left: -40px;
-  margin-top: 160px;
-  z-index: 3;
-  opacity: 1;
-  background: #080808;
-  padding-top: 10px;
-  padding-bottom: 10px;
+.portfoliosect .portfolio-text .portfolio-text-wrapper h2 {
+  font-weight: 600;
+  font-family: Raleway;
+  letter-spacing: 2px;
 }
-.portfolio-text h2 {
-  font-size: 35px;
-  font-family: poppins;
-  font-weight: 200;
-  padding: 20px 20px 10px 20px;
-  color: var(--color);
-  transition: all 0.4s ease;
-}
-.portfolio-text h5 {
-  font-size: 20px;
-  font-family: poppins;
-  font-weight: 200;
-  padding: 0px 20px;
-  color: var(--color);
-  transition: all 0.4s ease;
-}
-.portfolio-text p {
+.portfoliosect .portfolio-text .portfolio-text-wrapper h5 {
+  font-weight: 400;
   font-size: 16px;
+  margin-top: 10px;
+}
+.portfoliosect .portfolio-text .portfolio-text-wrapper .button {
+  margin-top: auto;
+}
+.projectButton {
+  font-size: 14px;
   opacity: 0.8;
   font-family: poppins;
-  font-weight: 200;
-  padding: 20px;
-}
-.button {
-  text-align: center;
-}
-.portfolio-text .projectButton {
-  font-size: 16px;
-  opacity: 0.8;
-  font-family: poppins;
-  font-weight: 200;
-  padding: 10px 20px;
+  font-weight: 400;
+  padding: 5px 10px;
   background: transparent;
   color: var(--color);
   transition: all 0.4s ease;
@@ -1023,18 +991,17 @@ form button {
   transition: all 0.4s ease;
   display: inline-block;
 }
-
 .portfolio-text a {
   display: inline-block;
   height: 50px;
-  margin: 20px;
+  margin: 20px 0 0;
 }
 .projectButton::before {
   content: "";
   position: absolute;
   width: 115%;
   height: 200%;
-  transform: rotate(-15deg) translateY(-20px);
+  transform: rotate(-8deg) translateY(-20px);
   top: 0%;
   left: -118%;
   z-index: 3;
@@ -1154,9 +1121,6 @@ form button {
     overflow: hidden;
     position: relative;
   }
-  .skills .img img { 
-    object-fit: cover;
-  }
   .home {
     padding: 0px 0px;
   }
@@ -1192,15 +1156,6 @@ form button {
   .aboutPara {
     margin-top: 30px;
   }
-  .portfolio {
-    flex-direction: column;
-  }
-  .portfolio-image,
-  .portfolio-text {
-    width: 80%;
-    margin: 0px;
-    padding: 0px;
-  }
   .contactContent {
     flex-direction: column;
   }
@@ -1224,6 +1179,9 @@ form button {
   }
   
   .skillContent {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .portfoliosect .portfolio-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -1298,11 +1256,10 @@ form button {
   #preloader {
     font-size: 50px;
   }
-  .portfolio-image,
-  .portfolio-text {
-    width: 100%;
-  }
   .skillContent {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .portfoliosect .portfolio-content {
     grid-template-columns: repeat(1, 1fr);
   }
 }
