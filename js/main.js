@@ -1,9 +1,12 @@
+// Preloader
 window.onload = function () {
   setTimeout(() => {
     document.getElementById("preloader").classList.add("active");
     document.getElementById("home").style.display = "block";
   }, 500);
 };
+
+// Menu Animation
 document.getElementById("menu").addEventListener("click", function () {
   document.getElementById("menuList").style.transform = "translateY(0%)";
   document.getElementById("menuList").style.transition = "0.4s";
@@ -13,10 +16,10 @@ document.getElementById("menuClose").addEventListener("click", function () {
   document.getElementById("menuList").style.transition = "0.4s";
 });
 
+// Color Update
 document.getElementById("color-changer").addEventListener("click", function () {
   document.getElementById("color-changer").classList.toggle("active");
 });
-
 document.querySelectorAll(".selectColor").forEach((element) => {
   element.addEventListener("click", (event) => {
     var selectedColor = element.getAttribute("title");
@@ -24,6 +27,7 @@ document.querySelectorAll(".selectColor").forEach((element) => {
   });
 });
 
+// Menu Breaker Animation
 document.querySelectorAll(".buttons").forEach((element) => {
   element.addEventListener("click", () => {
     var selected = element.getAttribute("data-text");
