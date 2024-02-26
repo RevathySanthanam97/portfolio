@@ -1196,6 +1196,7 @@ form button {
   .navLinks > ul li {
     padding: 15px 0px;
     font-size: 25px;
+    font-weight: 700;
   }
   .navLinks .skillButton::after {
     font-size: 25px;
