@@ -2,11 +2,12 @@
   padding: 0px;
   margin: 0px;
   box-sizing: border-box;
-  -webkit-user-select: none;
+  /* -webkit-user-select: none; */
 }
 :root {
   --color: #00909e;
   --mainColor: whitesmoke;
+  --main-bg: #171717;
 }
 .colors {
   color: var(--mainColor);
@@ -26,7 +27,7 @@ body {
   position: relative;
   overflow: hidden;
   overflow-y: scroll;
-  background-color: #171717;
+  background-color: var(--main-bg);
   color: var(--mainColor);
   font-family: "Poppins", sans-serif;
 }
@@ -45,7 +46,7 @@ body {
   z-index: 100;
   font-family: Arial, Helvetica, sans-serif;
   background-color: #202020;
-  color: whitesmoke;
+  color: var(--mainColor);
   font-size: 70px;
   width: 100%;
   transition: 1s;
@@ -99,13 +100,13 @@ section {
   justify-content: center;
   border-bottom-left-radius: 3px;
   border-top-left-radius: 3px;
-  background: whitesmoke;
+  background: var(--mainColor);
 }
 .color-selector {
   height: auto;
   width: 150px;
   padding: 10px;
-  background: whitesmoke;
+  background: var(--mainColor);
   font-family: poppins;
   font-size: 16px;
   display: flex;
@@ -457,7 +458,7 @@ nav {
 }
 #myForm input,
 #myForm textarea {
-  color: whitesmoke;
+  color: var(--mainColor);
 }
 .formHeader {
   font-size: 24px;
@@ -634,7 +635,7 @@ form button {
   font-size: 45px;
   font-family: raleway;
   padding: 10px;
-  padding-bottom: 30px;
+  padding-bottom: 50px;
   padding-top: 100px;
   font-weight: 900;
 }
@@ -818,7 +819,7 @@ form button {
 .skillContent {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
+  gap: 60px;
   grid-auto-rows: fit-content;
 }
 .skills {
@@ -829,7 +830,7 @@ form button {
 }
 .skills a {
   text-decoration: none;
-  color: whitesmoke;
+  color: var(--mainColor);
   cursor: auto;
 }
 .skills .img {
@@ -852,7 +853,7 @@ form button {
   left: 0;
   bottom: 0;
   background: var(--color);
-  color: whitesmoke;
+  color: var(--mainColor);
   font-size: 18px;
   text-align: center;
   font-weight: 400;
@@ -867,7 +868,7 @@ form button {
   text-align: center;
   vertical-align: center;
   font-family: poppins;
-  color: whitesmoke;
+  color: var(--mainColor);
   background-color: #050505;
   transition: all 0.5s ease;
 }
@@ -901,6 +902,9 @@ form button {
 /* portfolioSectionEnd */
 :root {
   --portfolio-space: 70px;
+}
+.portfoliosect .sectionTitle {
+  padding-top: 220px;
 }
 .portfoliosect .portfolio-content {
   margin: 30px 0;
