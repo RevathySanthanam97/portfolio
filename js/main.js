@@ -16,6 +16,28 @@ document.getElementById("menuClose").addEventListener("click", function () {
   document.getElementById("menuList").style.transition = "0.4s";
 });
 
+// Theme Update
+const themeSelectorElement = document.querySelectorAll(".theme-selector");
+const theme = localStorage.getItem("theme") || "dark";
+
+document.documentElement.setAttribute("data-theme", theme);
+themeSelectorElement.forEach(el => {
+  el.classList.toggle("active", el.dataset.themeOption === theme);
+});
+
+themeSelectorElement.forEach(el => {
+  el.onclick = () => {
+    const selectedTheme = el.dataset.themeOption;
+
+    document.documentElement.setAttribute("data-theme", selectedTheme);
+    localStorage.setItem("theme", selectedTheme);
+
+    themeSelectorElement.forEach(e =>
+      e.classList.toggle("active", e === el)
+    );
+  };
+});
+
 // Color Update
 document.getElementById("color-changer").addEventListener("click", function () {
   document.getElementById("color-changer").classList.toggle("active");
@@ -23,7 +45,7 @@ document.getElementById("color-changer").addEventListener("click", function () {
 document.querySelectorAll(".selectColor").forEach((element) => {
   element.addEventListener("click", (event) => {
     var selectedColor = element.getAttribute("title");
-    document.documentElement.style.setProperty("--color", selectedColor);
+    document.documentElement.style.setProperty("--highlight-color", selectedColor);
   });
 });
 
@@ -48,4 +70,41 @@ document.querySelectorAll(".buttons").forEach((element) => {
       }
     });
   });
+});
+
+
+// Form Submission
+const form = document.getElementById("myForm");
+const status = document.getElementById("formStatus");
+const button = document.getElementById("submit");
+
+form.addEventListener("submit", async (e) => {
+  e.preventDefault();
+
+  button.disabled = true;
+  button.innerText = "Sending...";
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(form.action, {
+      method: "POST",
+      body: formData,
+    });
+
+    if (response.ok) {
+      status.style.display = "block";
+      status.innerText = "Message sent successfully!";
+      form.reset(); // ✅ clear form
+    } else {
+      status.style.display = "block";
+      status.innerText = "Something went wrong. Try again.";
+    }
+  } catch (error) {
+    status.style.display = "block";
+    status.innerText = "Network error. Please try again.";
+  }
+
+  button.disabled = false;
+  button.innerText = "Submit";
 });
