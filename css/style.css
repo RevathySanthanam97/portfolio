@@ -1409,7 +1409,7 @@ form button:hover::before {
     height: auto;
   }
   .contactInfoContentLine .mailId p {
-    font-size: 10px;
+    font-size: 14px;
   }
   #preloader {
     font-size: 50px;

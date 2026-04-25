@@ -18,7 +18,7 @@ document.getElementById("menuClose").addEventListener("click", function () {
 
 // Theme Update
 const themeSelectorElement = document.querySelectorAll(".theme-selector");
-const theme = localStorage.getItem("theme") || "dark";
+const theme = localStorage.getItem("theme") || "light";
 
 document.documentElement.setAttribute("data-theme", theme);
 themeSelectorElement.forEach(el => {
