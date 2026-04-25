@@ -586,7 +586,13 @@
             <div class="formHeader">
               Message Me
             </div>
-            <form id="myForm" action="https://submit-form.com/Jg0sTzT7q" >
+            <form
+              id="myForm"
+              action="https://submit-form.com/Jg0sTzT7q"
+              method="POST"
+              target="hidden_iframe"
+              onsubmit="handleSubmit()"
+            >
               <div class="inputLine">
                 <input type="text" name="name" placeholder="Name" value="" required="true" id="name" class="inputName">
                 <input type="email" name="email" required="true" placeholder="Email" value="" id="email" class="inputName">
@@ -594,7 +600,8 @@
               <input type="text" name="subject" required="true" placeholder="Subject" value="" id="subject" class="inputSubject">
               <textarea name="message" required="true" class="inputTextarea" placeholder="Message" id="body" value=""></textarea>
               <button class="colorBg colors" target="_blank" type="submit" id="submit">Submit</button>
-              <p id="formStatus" style="display:none;"></p>
+              <iframe name="hidden_iframe" style="display:none;"></iframe>
+              <p id="formStatus" style="display:none; color: green;">Submitted Successfully!</p>
             </form>
           </div>
           <!--Contact form-->

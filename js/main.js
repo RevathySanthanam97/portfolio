@@ -74,37 +74,7 @@ document.querySelectorAll(".buttons").forEach((element) => {
 
 
 // Form Submission
-const form = document.getElementById("myForm");
-const status = document.getElementById("formStatus");
-const button = document.getElementById("submit");
-
-form.addEventListener("submit", async (e) => {
-  e.preventDefault();
-
-  button.disabled = true;
-  button.innerText = "Sending...";
-
-  const formData = new FormData(form);
-
-  try {
-    const response = await fetch(form.action, {
-      method: "POST",
-      body: formData,
-    });
-
-    if (response.ok) {
-      status.style.display = "block";
-      status.innerText = "Message sent successfully!";
-      form.reset(); // ✅ clear form
-    } else {
-      status.style.display = "block";
-      status.innerText = "Something went wrong. Try again.";
-    }
-  } catch (error) {
-    status.style.display = "block";
-    status.innerText = "Network error. Please try again.";
-  }
-
-  button.disabled = false;
-  button.innerText = "Submit";
-});
+function handleSubmit() {
+  document.getElementById("formStatus").style.display = "block";
+  document.getElementById("myForm").reset();
+}
