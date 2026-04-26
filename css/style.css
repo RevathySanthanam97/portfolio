@@ -68,6 +68,16 @@
 [data-theme="light"] .socialMediaLinks {
   opacity: 1;
 }
+[data-theme="dark"] .theme-selector-section .sun {
+  opacity: 0;
+  transform: scale(0.5) rotate(-90deg);
+}
+
+[data-theme="dark"] .theme-selector-section .moon {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+
 .colors {
   color: var(--main-text-color);
 }
@@ -150,6 +160,39 @@ section {
 .color-changer.active {
   right: 0px;
 }
+.theme-selector-section {
+  position: fixed;
+  height: 45px;
+  width: 45px;
+  right: 0;
+  top: 34%;
+  z-index: 7;
+
+  display: flex;
+  flex-direction: row;
+  
+  border-bottom-left-radius: 3px;
+  border-top-left-radius: 3px;
+  background: var(--settings-bg-color);
+}
+.theme-selector-section span {
+  height: 45px;
+  width: 45px;
+  padding: 5px;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 0.4s ease;
+}
+.theme-selector-section .sun {
+  opacity: 1;
+  transform: scale(1) rotate(0deg);
+}
+.theme-selector-section .moon {
+  opacity: 0;
+  transform: scale(0.5) rotate(90deg);
+}
 .color-panel {
   height: 45px;
   cursor: pointer;
@@ -184,7 +227,7 @@ section {
   fill: var(--icon-color);
 }
 
-.colors ul, .theme-selector-section ul {
+.colors ul {
   display: flex;
   flex-wrap: wrap;
   height: auto;
@@ -193,7 +236,7 @@ section {
   justify-content: center;
   margin-top: 10px;
 }
-.colors li, .theme-selector-section li {
+.colors li {
   height: 30px;
   width: 30px;
   margin: 5px;
@@ -201,20 +244,13 @@ section {
   position: relative;
   overflow: hidden;
 }
-.theme-selector-section ul li {
-  border: 2px solid transparent;
-  padding: 3px;
-}
-.theme-selector-section svg path {
-  fill: var(--icon-color);
-}
 .theme-selector.active{
   border: 2px solid var(--highlight-color);
 }
 .color-selector li {
   list-style: none;
 }
-.colors li a, .theme-selector-section li a {
+.colors li a {
   position: absolute;
   top: 0;
   left: 0;
@@ -1194,6 +1230,9 @@ form button:hover::before {
   }
   .color-changer {
     top: 25%;
+  }
+  .theme-selector-section {
+    top: 18%;
   }
   .menuList {
     padding: 15px 20px;
