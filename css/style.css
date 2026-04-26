@@ -165,7 +165,7 @@ section {
   height: 45px;
   width: 45px;
   right: 0;
-  top: 34%;
+  top: calc(40% - 60px);
   z-index: 7;
 
   display: flex;
@@ -1232,7 +1232,7 @@ form button:hover::before {
     top: 25%;
   }
   .theme-selector-section {
-    top: 18%;
+    top: calc(25% - 60px);
   }
   .menuList {
     padding: 15px 20px;
