@@ -78,6 +78,17 @@
   transform: scale(1) rotate(0deg);
 }
 
+.animate-section {
+  transform: translateY(40px);
+  transition: 1s ease;
+  opacity: 0.5;
+}
+
+.animate-section.in-view {
+  transform: translateY(0);
+  opacity: 1;
+}
+
 .colors {
   color: var(--main-text-color);
 }
@@ -443,6 +454,16 @@ nav {
   transform: rotate(15deg);
   transform: translateY(-100%);
 }
+.sectionSeparator {
+  margin: 120px 0;
+}
+.sectionSeparator.home {
+  padding: 0px 0px;
+  margin: 0;
+}
+.contact.sectionSeparator {
+  margin-bottom: 0;
+}
 @keyframes breakeranimate {
   0% {
     transform: translateX(-150%) rotate(15deg) translateY(-50%);
@@ -771,7 +792,7 @@ form button:hover::before {
   font-size: 45px;
   font-family: raleway;
   padding: 10px;
-  padding-bottom: 50px;
+  padding-bottom: 70px;
   padding-top: 100px;
   font-weight: 900;
 }
@@ -1058,9 +1079,6 @@ form button:hover::before {
 :root {
   --portfolio-space: 70px;
 }
-.portfoliosect .sectionTitle {
-  padding-top: 220px;
-}
 .portfoliosect .portfolio-content {
   margin: 30px 0;
   display: grid;
@@ -1216,6 +1234,40 @@ form button:hover::before {
   animation: slide-up 1s ease 0.5s forwards;
 }
 
+/* Impact Section Start  */
+.impact-container {
+  display: flex;
+  gap: 40px;
+}
+.impact-container .impact-left {
+  width: 60%;
+  padding-left: 40px;
+}
+.impact-container .impact-left li {
+  padding-bottom: 12px;
+}
+.impact-container .impact-right {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(250px, 1fr));
+  gap: 40px;
+  color: var(--skills-text);
+}
+.impact-container .impact-right .counter-box {
+  background-color: var(--skills-bg);
+  padding: 24px;
+  border-radius: 8px;
+}
+.impact-container .impact-right .counter-box p {
+  margin-top: 12px;
+}
+.impact-container .impact-right .counter-box .unit {
+  font-weight: normal;
+  font-size: 16px;
+  padding-left: 4px;
+  display: inline-block;
+}
+/* Impact Section End  */
+
 /* responsiveDesign */
 @media only screen and (max-width: 1299px) {
   .skillText p {
@@ -1281,9 +1333,6 @@ form button:hover::before {
   .skillText p {
     font-size: 20px;
     padding: 20px;
-  }
-  .home {
-    padding: 0px 0px;
   }
   .banner {
     width: 100%;
@@ -1362,6 +1411,15 @@ form button:hover::before {
   }
   .skillText p {
     font-size: 16px;
+  }
+  .impact-container {
+    flex-direction: column;
+  }
+  .impact-container .impact-left {
+    width: 100%;
+  }
+  .sectionSeparator {
+    margin: 80px 0;
   }
 }
 
